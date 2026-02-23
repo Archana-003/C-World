@@ -1,0 +1,40 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+     int n = 5;
+     int spaces=n-1;
+     int stars = 1;
+     for(int i=0;i<n;i++)
+     {
+         for(int j=0;j<spaces;j++)
+         {
+             printf(" ");
+         }
+         for(int j=0;j<stars;j++)
+         {
+            if(i == 0 || i == n-1) {
+                printf("*");   // First and last row full stars
+            }
+            else if(j == 0||j== stars-1) {
+                printf("*");   // First and last star in row
+            }
+            else {
+                printf(" ");   // Middle hollow space
+            }
+         }
+         spaces--;
+         stars+=2;
+         printf("\n");
+     }
+    return 0;
+}
+
+
+
+    *
+   * *
+  *   *
+ *     *
+*********
